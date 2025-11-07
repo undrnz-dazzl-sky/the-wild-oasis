@@ -30,7 +30,10 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       editCabin(
         { newCabinData: { ...data, image }, id: editId },
         {
-          onSuccess: (data) => reset(),
+          onSuccess: (data, editId) => {
+            reset(editId);
+            onCloseModal?.();
+          },
         }
       );
     } else
