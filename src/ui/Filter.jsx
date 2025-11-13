@@ -44,6 +44,12 @@ function Filter({ filterField, options }) {
     setSearchParams(searchParams);
   }
 
+  // const handleClick = (value) => {
+  //   searchParams.set(filterField, value);
+  //   searchParams.set("page", 1);
+  //   setSearchParams(searchParams);
+  // };
+
   return (
     <StyledFilter>
       {options.map((option) => (
