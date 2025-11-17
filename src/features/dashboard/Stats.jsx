@@ -1,15 +1,16 @@
 import {
+  HiOutlineBanknotes,
   HiOutlineBriefcase,
-  HiOutlineCalendar,
+  HiOutlineCalendarDays,
   HiOutlineChartBar,
-} from "react-icons/hi";
-import { HiOutlineBanknotes } from "react-icons/hi2";
+} from "react-icons/hi2";
 import Stat from "./Stat";
+import { formatCurrency } from "../../utils/helpers";
 
 function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
   const numBookings = bookings.length;
 
-  const sales = bookings.reduce((acc, curr) => acc + curr.totalPrice, 0);
+  const sales = bookings.reduce((acc, cur) => acc + cur.totalPrice, 0);
 
   const checkins = confirmedStays.length;
 
@@ -25,21 +26,18 @@ function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
         icon={<HiOutlineBriefcase />}
         value={numBookings}
       />
-
       <Stat
         title="Sales"
         color="green"
         icon={<HiOutlineBanknotes />}
-        value={numBookings}
+        value={formatCurrency(sales)}
       />
-
       <Stat
         title="Check ins"
         color="indigo"
-        icon={<HiOutlineCalendar />}
+        icon={<HiOutlineCalendarDays />}
         value={checkins}
       />
-
       <Stat
         title="Occupancy rate"
         color="yellow"

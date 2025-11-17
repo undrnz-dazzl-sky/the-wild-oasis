@@ -25,11 +25,11 @@ const TodayList = styled.ul`
   overflow: scroll;
   overflow-x: hidden;
 
-  &::-webkit-scrollbar {
+  /* &::-webkit-scrollbar {
     width: 0 !important;
   }
   scrollbar-width: none;
-  -ms-overflow-style: none;
+  -ms-overflow-style: none; */
 `;
 
 const NoActivity = styled.p`
