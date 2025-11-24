@@ -5,4 +5,4 @@ The Wild Oasis is an app designed for hotel employees to help them manage create
 A professional planning application developed with React Query, styled components, React Hooks, Supabase, and advanced compound component patterns, has available authentication, charts and dark mode. 
 
 <h2>Demo</h2>
-<a href="https://undrnz-dazzl-sky-the-wild-oasis.netlify.app" rel='nofollow'>The Wild Oasis</a>
+<a href="https://the-wild-0as1s.netlify.app" rel='nofollow'>The Wild Oasis</a>
